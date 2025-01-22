@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()">
+        <ion-icon name="moon" *ngIf="!isDarkMode"></ion-icon>
+        <ion-icon name="sunny" *ngIf="isDarkMode"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="infoUrl" (click)="openInfoPage()">
+        <ion-icon name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

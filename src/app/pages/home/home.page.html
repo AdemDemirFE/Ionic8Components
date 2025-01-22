@@ -1,0 +1,10 @@
+<app-header title="Home Page" infoUrl="https://ionicframework.com/docs"></app-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let component of components" [routerLink]="component.route">
+      {{ component.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>
