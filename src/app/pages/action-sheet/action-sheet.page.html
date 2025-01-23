@@ -1,6 +1,53 @@
-<app-header title="Action Sheet" infoUrl="https://ionicframework.com/docs/api/action-sheet"></app-header>
+<app-header
+  title="Action Sheet"
+  infoUrl="https://ionicframework.com/docs/api/action-sheet"
+></app-header>
 
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-button expand="block" (click)="openBasicActionSheet()">
+        Basic Action Sheet
+      </ion-button>
+    </ion-item>
 
-<ion-content>
-  <ion-button (click)="openActionSheet()">Show Action Sheet</ion-button>
+    <ion-item>
+      <ion-button
+        expand="block"
+        color="secondary"
+        (click)="openActionSheetWithIcons()"
+      >
+        Action Sheet with Icons
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button
+        expand="block"
+        color="tertiary"
+        (click)="openActionSheetWithSubtitles()"
+      >
+        Action Sheet with Subtitles
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button
+        expand="block"
+        color="warning"
+        (click)="openCustomStyleActionSheet()"
+      >
+        Custom Style Action Sheet
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="open-action-sheet">Open</ion-button>
+  <ion-action-sheet
+    trigger="open-action-sheet"
+    class="my-custom-class"
+    header="Example header"
+    subHeader="Example subheader"
+    [buttons]="actionSheetButtons"
+  ></ion-action-sheet>
 </ion-content>
