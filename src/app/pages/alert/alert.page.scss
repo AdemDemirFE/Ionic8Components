@@ -1,0 +1,36 @@
+ion-content {
+  --padding: 16px;
+}
+
+ion-button {
+  margin: 10px 0;
+}
+
+.result-container {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--ion-color-light);
+
+  h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+// Alert buton stilleri
+.alert-button-delete {
+  color: var(--ion-color-danger);
+}
+
+.alert-button-confirm {
+  color: var(--ion-color-success);
+}
+
+.alert-button-cancel {
+  color: var(--ion-color-medium);
+}

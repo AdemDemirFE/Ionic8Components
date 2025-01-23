@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'accordion',
     loadChildren: () => import('./pages/accordion/accordion.module').then( m => m.AccordionPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
   }
 ];
 @NgModule({

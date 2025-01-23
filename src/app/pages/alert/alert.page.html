@@ -1,0 +1,78 @@
+<app-header
+  title="Alert"
+  infoUrl="https://ionicframework.com/docs/api/alert"
+></app-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <!-- Basit Alert -->
+    <ion-button id="basic-alert" expand="block" color="primary">
+      Basit Alert
+    </ion-button>
+    <ion-alert
+      trigger="basic-alert"
+      header="Basit Alert"
+      subHeader="Alt Başlık"
+      message="Bu bir basit alert mesajıdır."
+      [buttons]="['Tamam']"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+
+    <!-- Input Alert -->
+    <ion-button id="input-alert" expand="block" color="secondary">
+      Input Alert
+    </ion-button>
+    <ion-alert
+      trigger="input-alert"
+      header="Bilgilerinizi Girin"
+      [buttons]="['İptal', 'Kaydet']"
+      [inputs]="inputAlertOptions"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+
+    <!-- Radio Alert -->
+    <ion-button id="radio-alert" expand="block" color="tertiary">
+      Radio Alert
+    </ion-button>
+    <ion-alert
+      trigger="radio-alert"
+      header="Renk Seçin"
+      [buttons]="['İptal', 'Tamam']"
+      [inputs]="radioAlertOptions"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+
+    <!-- Checkbox Alert -->
+    <ion-button id="checkbox-alert" expand="block" color="success">
+      Checkbox Alert
+    </ion-button>
+    <ion-alert
+      trigger="checkbox-alert"
+      header="Spor Seçin"
+      [buttons]="['İptal', 'Tamam']"
+      [inputs]="checkboxAlertOptions"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+
+    <!-- Çoklu Buton Alert -->
+    <ion-button id="multi-button-alert" expand="block" color="warning">
+      Çoklu Buton Alert
+    </ion-button>
+    <ion-alert
+      trigger="multi-button-alert"
+      header="İşlem Onayı"
+      message="Bu işlemi gerçekleştirmek istediğinize emin misiniz?"
+      [buttons]="multiButtonAlertOptions"
+      (didDismiss)="setResult($event)"
+    ></ion-alert>
+
+    <!-- Sonuç Gösterimi -->
+    <div class="result-container" *ngIf="result">
+      <ion-text color="primary">
+        <h2>Son İşlem Sonucu:</h2>
+        <p>{{ result | json }}</p>
+      </ion-text>
+    </div>
+  </ion-list>
+</ion-content>

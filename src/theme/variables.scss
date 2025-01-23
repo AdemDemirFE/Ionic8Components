@@ -1,19 +1,63 @@
 /* Default Light Theme */
 :root {
-    --ion-color-primary: #3880ff;
-    --ion-color-primary-rgb: 56, 128, 255;
-    --ion-color-secondary: #3dc2ff;
-    --ion-color-secondary-rgb: 61, 194, 255;
-    --ion-background-color: #ffffff;
-    --ion-text-color: #000000;
-  }
+  // Ana renkler
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+
+  // Arka plan ve metin renkleri
+  --ion-background-color: #ffffff;
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-text-color: #000000;
+  --ion-text-color-rgb: 0, 0, 0;
+
+  // UI elementleri için renkler
+  --ion-item-background: #ffffff;
+  --ion-toolbar-background: #f8f8f8;
+  --ion-card-background: #ffffff;
+  --ion-border-color: #d8d8d8;
   
-  /* Dark Theme */
-  :root[theme='dark'] {
-    --ion-color-primary: #222428;
-    --ion-color-primary-rgb: 34, 36, 40;
-    --ion-color-secondary: #3dc2ff;
-    --ion-color-secondary-rgb: 61, 194, 255;
-    --ion-background-color: #121212;
-    --ion-text-color: #ffffff;
-  }
+  // Button renkleri
+  --ion-button-text: #ffffff;
+  --ion-button-disabled: #cccccc;
+}
+
+/* Dark Theme */
+:root[theme='dark'] {
+  // Ana renkler
+  --ion-color-primary: #428cff;
+  --ion-color-primary-rgb: 66, 140, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #3a7be0;
+  --ion-color-primary-tint: #5598ff;
+
+  --ion-color-secondary: #50c8ff;
+  --ion-color-secondary-rgb: 80, 200, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #46b0e0;
+  --ion-color-secondary-tint: #62ceff;
+
+  // Arka plan ve metin renkleri
+  --ion-background-color: #121212;
+  --ion-background-color-rgb: 18, 18, 18;
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+
+  // UI elementleri için renkler
+  --ion-item-background: #1e1e1e;
+  --ion-toolbar-background: #1f1f1f;
+  --ion-card-background: #1e1e1e;
+  --ion-border-color: #2e2e2e;
+  
+  // Button renkleri
+  --ion-button-text: #ffffff;
+  --ion-button-disabled: #404040;
+}
