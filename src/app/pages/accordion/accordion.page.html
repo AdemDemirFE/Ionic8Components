@@ -1,0 +1,48 @@
+<app-header
+  title="Action Sheet"
+  infoUrl="https://ionicframework.com/docs/api/accordion"
+></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Accordion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-accordion-group>
+    <!-- Basic Accordion Items -->
+    <ion-accordion *ngFor="let item of accordionItems">
+      <ion-item slot="header">
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-item>
+      <div slot="content">{{ item.content }}</div>
+    </ion-accordion>
+
+    <!-- Color Items -->
+    <ion-accordion *ngFor="let item of colorItems">
+      <ion-item slot="header">
+        <ion-icon [name]="item.icon" slot="start"></ion-icon>
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item *ngFor="let color of item.items">
+          {{ color }}
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <!-- Animal Items -->
+    <ion-accordion *ngFor="let item of animalItems">
+      <ion-item slot="header">
+        <ion-icon [name]="item.icon" slot="start"></ion-icon>
+        <ion-label>{{ item.title }}</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item *ngFor="let animal of item.items">
+          {{ animal }}
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
