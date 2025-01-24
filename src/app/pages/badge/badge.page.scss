@@ -1,0 +1,25 @@
+ion-badge {
+  &[color="primary"] {
+    --background: var(--ion-color-primary);
+  }
+
+  &[color="danger"] {
+    --background: var(--ion-color-danger);
+  }
+
+  &[color="success"] {
+    --background: var(--ion-color-success);
+  }
+}
+
+ion-button {
+  margin: 10px;
+  
+  ion-badge {
+    margin-left: 8px;
+  }
+}
+
+ion-list {
+  padding: 20px;
+}

@@ -14,6 +14,7 @@ export class HomePage implements OnInit {
     { name: 'Action Sheet', route: '/action-sheet' },
     { name: 'Accordion', route: '/accordion' },
     { name: 'Alert', route: '/alert' },
+    { name: 'Badge', route: '/badge' },
     { name: 'Button', route: '/button' },
     // Buraya diğer bileşenleri ekleyebilirsiniz
   ];
