@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
     { name: 'Accordion', route: '/accordion' },
     { name: 'Alert', route: '/alert' },
     { name: 'Badge', route: '/badge' },
+    { name: 'Breadcrumbs', route: '/breadcrumbs' },
     { name: 'Button', route: '/button' },
     // Buraya diğer bileşenleri ekleyebilirsiniz
   ];

@@ -1,0 +1,42 @@
+<app-header
+  title="Breadcrumbs"
+  infoUrl="https://ionicframework.com/docs/api/breadcrumbs"
+></app-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Basit Breadcrumbs -->
+  <ion-breadcrumbs>
+    <ion-breadcrumb href="#home">
+      Ana Sayfa
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      Elektronik
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      Kameralar
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- İkonlu Breadcrumbs -->
+  <ion-breadcrumbs class="ion-margin-top">
+    <ion-breadcrumb href="#home">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Ana Sayfa
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      <ion-icon slot="start" name="laptop"></ion-icon>
+      Elektronik
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      <ion-icon slot="start" name="camera"></ion-icon>
+      Kameralar
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- Özel Ayraçlı Breadcrumbs -->
+  <ion-breadcrumbs separator="→" class="ion-margin-top">
+    <ion-breadcrumb href="#home">Ana Sayfa</ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">Elektronik</ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">Kameralar</ion-breadcrumb>
+  </ion-breadcrumbs>
+</ion-content>
