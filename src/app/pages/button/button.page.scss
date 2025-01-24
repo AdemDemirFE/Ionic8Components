@@ -1,0 +1,104 @@
+ion-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+
+  // Buton container stilleri
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  // Özel buton stilleri
+  ion-button {
+    --border-radius: 8px;
+    
+    &.custom-button {
+      --background: linear-gradient(45deg, #ff6b6b, #feca57);
+      --background-hover: linear-gradient(45deg, #ff5252, #ff9f43);
+      --color: #ffffff;
+      
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    // Loading durumu için animasyon
+    &.loading {
+      ion-spinner {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  // Buton grupları için özel stiller
+  ion-button-group {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    ion-button {
+      flex: 1;
+      margin: 0;
+      --border-radius: 0;
+
+      &:first-child {
+        --border-radius: 8px 0 0 8px;
+      }
+
+      &:last-child {
+        --border-radius: 0 8px 8px 0;
+      }
+    }
+  }
+
+  // Outline butonlar için özel stiller
+  ion-button[fill="outline"] {
+    --border-width: 2px;
+    --border-color: var(--ion-color-primary);
+    
+    &:hover {
+      --background: rgba(var(--ion-color-primary-rgb), 0.1);
+    }
+  }
+
+  // Responsive tasarım için medya sorguları
+  @media (min-width: 768px) {
+    .button-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+      ion-button {
+        flex: 0 0 calc(33.333% - 10px);
+      }
+    }
+  }
+
+  // Dark mode desteği
+  @media (prefers-color-scheme: dark) {
+    ion-button[fill="outline"] {
+      --border-color: var(--ion-color-primary);
+      --color: var(--ion-color-primary);
+    }
+  }
+}
+
+// Animasyonlar
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1.5s infinite;
+}

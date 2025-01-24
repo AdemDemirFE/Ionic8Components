@@ -1,0 +1,139 @@
+<app-header
+  title="Button"
+  infoUrl="https://ionicframework.com/docs/api/button"
+></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Button Examples</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Temel Butonlar -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Temel Butonlar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="handleClick('Default')">Default</ion-button>
+      <ion-button expand="block" (click)="handleClick('Block Button')">Block Button</ion-button>
+      <ion-button expand="full" (click)="handleClick('Full Button')">Full Button</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Farklı Renkler -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Farklı Renkler</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="primary" (click)="handleClick('Primary')">Primary</ion-button>
+      <ion-button color="secondary" (click)="handleClick('Secondary')">Secondary</ion-button>
+      <ion-button color="tertiary" (click)="handleClick('Tertiary')">Tertiary</ion-button>
+      <ion-button color="success" (click)="handleClick('Success')">Success</ion-button>
+      <ion-button color="warning" (click)="handleClick('Warning')">Warning</ion-button>
+      <ion-button color="danger" (click)="handleClick('Danger')">Danger</ion-button>
+      <ion-button color="light" (click)="handleClick('Light')">Light</ion-button>
+      <ion-button color="medium" (click)="handleClick('Medium')">Medium</ion-button>
+      <ion-button color="dark" (click)="handleClick('Dark')">Dark</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Outline Butonlar -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Outline Butonlar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button fill="outline" (click)="handleClick('Outline')">Outline</ion-button>
+      <ion-button fill="clear" (click)="handleClick('Clear')">Clear</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Boyutlar -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Boyutlar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button size="small" (click)="handleClick('Small')">Small</ion-button>
+      <ion-button size="default" (click)="handleClick('Default Size')">Default</ion-button>
+      <ion-button size="large" (click)="handleClick('Large')">Large</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- İkonlu Butonlar -->
+  <ion-list>
+    <ion-item>
+      <ion-label>İkonlu Butonlar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="handleClick('Sol İkon')">
+        <ion-icon slot="start" name="star"></ion-icon>
+        Sol İkon
+      </ion-button>
+      <ion-button (click)="handleClick('Sağ İkon')">
+        Sağ İkon
+        <ion-icon slot="end" name="heart"></ion-icon>
+      </ion-button>
+      <ion-button (click)="handleClick('Sadece İkon')">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Yuvarlak Butonlar -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Yuvarlak Butonlar</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button shape="round" (click)="handleClick('Yuvarlak Button')">Yuvarlak Button</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Button Groups -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Button Groups</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-buttons>
+        <ion-button (click)="handleClick('Sol')">Sol</ion-button>
+        <ion-button (click)="handleClick('Orta')">Orta</ion-button>
+        <ion-button (click)="handleClick('Sağ')">Sağ</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <!-- Disabled Buton -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Disabled Buton</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button disabled="true">Disabled</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Loading Buton -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Loading Buton</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="toggleLoading()">
+        <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+        {{ isLoading ? 'Loading...' : 'Click Me' }}
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Buton Tıklama Sayacı -->
+  <ion-list>
+    <ion-item>
+      <ion-label>Buton Tıklama Sayacı: {{ buttonClicks }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
