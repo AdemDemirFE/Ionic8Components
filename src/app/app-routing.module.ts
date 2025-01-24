@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'button',
     loadChildren: () => import('./pages/button/button.module').then( m => m.ButtonPageModule)
+  },
+  {
+    path: 'ripple-effect',
+    loadChildren: () => import('./ripple-effect/ripple-effect.module').then( m => m.RippleEffectPageModule)
   }
 ];
 @NgModule({

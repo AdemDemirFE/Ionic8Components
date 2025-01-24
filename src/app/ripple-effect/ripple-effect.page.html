@@ -1,0 +1,59 @@
+<app-header
+  title="Ripple Effect"
+  infoUrl="https://ionicframework.com/docs/api/ripple-effect"
+></app-header>
+
+
+<ion-content [fullscreen]="true">
+  <!-- Temel Şekiller -->
+  <div class="wrapper">
+    <b>Temel Şekiller</b>
+    <div class="ion-activatable ripple-parent rectangle">
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent rounded-rectangle">
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent circle">
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+  </div>
+
+  <!-- Sosyal Medya Butonları -->
+  <div class="social-buttons">
+    <div class="ion-activatable ripple-parent social-button" (click)="onButtonClick('like')">
+      <ion-icon name="heart"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent social-button" (click)="onButtonClick('share')">
+      <ion-icon name="share-social"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+    <div class="ion-activatable ripple-parent social-button" (click)="onButtonClick('save')">
+      <ion-icon name="bookmark"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+  </div>
+
+  <!-- Ürün Listesi -->
+  <div class="product-list">
+    <div *ngFor="let product of products" 
+         class="ion-activatable ripple-parent product-item"
+         (click)="onProductClick(product)">
+      <div class="product-info">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price}} TL</p>
+      </div>
+      <ion-ripple-effect type="bounded"></ion-ripple-effect>
+    </div>
+  </div>
+
+  <!-- Özel Renkli Ripple -->
+  <div class="custom-ripple-section">
+    <div class="ion-activatable ripple-parent custom-ripple"
+         *ngFor="let color of rippleColors | keyvalue">
+      <span>{{color.key}}</span>
+      <ion-ripple-effect [style.--ripple-color]="color.value"></ion-ripple-effect>
+    </div>
+  </div>
+</ion-content>

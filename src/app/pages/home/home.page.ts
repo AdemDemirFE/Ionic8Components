@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
     { name: 'Badge', route: '/badge' },
     { name: 'Breadcrumbs', route: '/breadcrumbs' },
     { name: 'Button', route: '/button' },
+    { name: 'Ripple Effect', route: '/ripple-effect' },
     // Buraya diğer bileşenleri ekleyebilirsiniz
   ];
 
